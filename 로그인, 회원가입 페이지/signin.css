@@ -1,32 +1,35 @@
 *{
     margin: 0px;
+    background-color: honeydew;
 }
 
 section{
-    margin-left: 30%;
-    margin-top: 10%;
+    align-items: center;
     display: flex;
     justify-content: center;
-    height: max-content;
+    height: 500px;
+}
+
+h3{
+    margin: 4px;
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin: 30px;
-
+    text-align: center;
 }
 
 .container>input{
-    width: 100px;
+    width: 200px;
     height: 30px;
     margin: 5px;
+    background-color: white;
     border-color: aqua;
 }
 
 .container>button{
-    width: 100px;
+    width: 200px;
     height:30px;
     margin: 5px;
     background-color: aqua;
