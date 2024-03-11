@@ -1,0 +1,34 @@
+*{
+    margin: 0px;
+}
+
+section{
+    margin-left: 30%;
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 30px;
+
+}
+
+.container>input{
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    border-color: aqua;
+}
+
+.container>button{
+    width: 100px;
+    height:30px;
+    margin: 5px;
+    background-color: aqua;
+}
+
