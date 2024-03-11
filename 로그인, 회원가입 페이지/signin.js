@@ -1,4 +1,4 @@
-let singin_btn = document.getElementById("singin_btn");
+let singin_btn = document.getElementById("signin_btn");
 
 let username_input = document.getElementById("username");
 let username;
@@ -15,7 +15,7 @@ singin_btn.onclick = function () {
     console.log("password", password);
 };
 
-let singup_btn = document.getElementById("singup_btn");
+let singup_btn = document.getElementById("signup_btn");
 singup_btn.onclick = function () {
     console.log("회원가입 페이지로 이동합니다")
 }
