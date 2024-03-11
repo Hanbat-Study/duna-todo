@@ -9,7 +9,7 @@ let password;
 password_input.addEventListener("change", () => password = password_input.value);
 
 singin_btn.onclick = function () {
-
+    preventDefault()
     console.log("로그인 페이지로 이동합니다")
     console.log("username: ", username);
     console.log("password", password);

@@ -32,6 +32,7 @@ password2_input.addEventListener("change", () => password2 = password2_input.val
 
 
 singup_btn.onclick = function () {
+    event.preventDefault()
     console.log("이름", username)
     console.log("성별", gender)
     console.log("생일", birth)
