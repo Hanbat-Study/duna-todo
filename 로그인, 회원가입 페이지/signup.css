@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    background-color: honeydew;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+section{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.container>input{
+    width: 200px;
+    height: 30px;
+    margin: 5px;
+    background-color: white;
+    border-color: aqua;
+}
+
+.container>button{
+    width: 200px;
+    height:30px;
+    margin: 5px;
+    background-color: aqua;
+}
