@@ -38,5 +38,10 @@ singup_btn.onclick = function () {
     console.log("고향", region)
     console.log("아이디(이메일)", email)
     console.log("비밀번호", password1)
+};
+
+let back_btn = document.getElementById("back_btn");
+
+back_btn.onclick = function () {
     console.log("로그인 페이지로 이동합니다")
 };
