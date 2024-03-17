@@ -1,12 +1,10 @@
 package study.ToDoList.user;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.NonNull;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -17,7 +15,7 @@ import java.time.LocalDate;
 public class UserRequest {
 
     @NotEmpty
-    @Length(max=255)
+    @Length(max = 255)
     private String name;
 
     @NotNull
@@ -32,11 +30,11 @@ public class UserRequest {
     private Hometown hometown;
 
     @NotEmpty
-    @Length(max=255)
+    @Length(max = 255)
     private String login_id;
 
     @NotEmpty
-    @Length(max=255)
+    @Length(max = 255)
     private String password;
 
     User to() {

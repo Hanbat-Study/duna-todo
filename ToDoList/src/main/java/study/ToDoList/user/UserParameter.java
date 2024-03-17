@@ -10,11 +10,11 @@ import org.hibernate.validator.constraints.Length;
 public class UserParameter {
 
     @NotEmpty
-    @Length(max=255)
+    @Length(max = 255)
     private String login_id;
 
     @NotEmpty
-    @Length(max=255)
+    @Length(max = 255)
     private String password;
 
 
