@@ -1,4 +1,4 @@
-package study.ToDoList.User;
+package study.ToDoList.user;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -16,11 +16,11 @@ public class User {
 
     private String name;
 
-    private enum gender;
+    private Gender gender;
 
     private LocalDate birth;
 
-    private enum hometown;
+    private Hometown hometown;
 
     private String login_id;
 
@@ -28,13 +28,12 @@ public class User {
 
     protected User() {}
 
-    public User(String name, LocalDate birth, String login_id, String password) {
+    public User(String name, Gender gender, LocalDate birth, Hometown hometown, String login_id, String password) {
         this.name = name;
+        this.gender = gender;
         this.birth = birth;
+        this.hometown = hometown;
         this.login_id = login_id;
         this.password = password;
     }
-
-
-
 }

@@ -1,4 +1,4 @@
-package study.ToDoList.User;
+package study.ToDoList.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
