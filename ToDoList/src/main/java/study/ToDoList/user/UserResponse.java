@@ -1,10 +1,12 @@
 package study.ToDoList.user;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @NoArgsConstructor
+@Getter
 public class UserResponse {
 
     private String name;
@@ -35,7 +37,7 @@ public class UserResponse {
                 user.getGender().getMessage(),
                 user.getBirth(),
                 user.getHometown().getMessage(),
-                user.getLogin_id(),
+                user.getLoginId(),
                 user.getPassword()
         );
     }
