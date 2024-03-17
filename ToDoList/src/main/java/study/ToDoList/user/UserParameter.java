@@ -11,7 +11,7 @@ public class UserParameter {
 
     @NotEmpty
     @Length(max = 255)
-    private String login_id;
+    private String loginId;
 
     @NotEmpty
     @Length(max = 255)

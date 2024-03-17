@@ -22,8 +22,8 @@ public class UserRequest {
     private Gender gender;
 
     @NotNull
-    @DateTimeFormat(pattern = "yyyy-MM")
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM", timezone = "Asia/Seoul")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd", timezone = "Asia/Seoul")
     private LocalDate birth;
 
     @NotNull
@@ -31,13 +31,13 @@ public class UserRequest {
 
     @NotEmpty
     @Length(max = 255)
-    private String login_id;
+    private String loginId;
 
     @NotEmpty
     @Length(max = 255)
     private String password;
 
     User to() {
-        return new User(name, gender, birth, hometown, login_id, password);
+        return new User(name, gender, birth, hometown, loginId, password);
     }
 }

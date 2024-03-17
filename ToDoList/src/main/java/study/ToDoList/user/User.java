@@ -12,7 +12,7 @@ public class User {
 
     @Id
     @GeneratedValue
-    private int userid;
+    private Long userId;
 
     private String name;
 
@@ -22,18 +22,19 @@ public class User {
 
     private Hometown hometown;
 
-    private String login_id;
+    private String loginId;
 
     private String password;
 
-    protected User() {}
+    public User() {
+    }
 
-    public User(String name, Gender gender, LocalDate birth, Hometown hometown, String login_id, String password) {
+    public User(String name, Gender gender, LocalDate birth, Hometown hometown, String loginId, String password) {
         this.name = name;
         this.gender = gender;
         this.birth = birth;
         this.hometown = hometown;
-        this.login_id = login_id;
+        this.loginId = loginId;
         this.password = password;
     }
 }
