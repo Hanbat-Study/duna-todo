@@ -1,5 +1,6 @@
 package study.ToDoList.user;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.Getter;
 
 @Getter
@@ -12,6 +13,7 @@ public enum Gender {
         this.message = message;
     }
 
+    @JsonCreator
     public static Gender from(String sub) {
         for (Gender gender : Gender.values()) {
             if (gender.getMessage().equals(sub)) {

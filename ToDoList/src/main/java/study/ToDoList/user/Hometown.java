@@ -1,5 +1,6 @@
 package study.ToDoList.user;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.Getter;
 
 @Getter
@@ -14,6 +15,7 @@ public enum Hometown {
         this.message = message;
     }
 
+    @JsonCreator
     public static Hometown from(String sub) {
         for (Hometown hometown : Hometown.values()) {
             if (hometown.getMessage().equals(sub)) {
