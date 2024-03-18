@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import static study.ToDoList.user.StatusCode.CREATED;
-import static study.ToDoList.user.StatusCode.OK;
+import static study.ToDoList.user.StatusCode.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,12 +17,22 @@ public class UserController {
 
     @PostMapping("/api/user/signin")
     public ResponseEntity signin(@RequestBody UserParameter userParameter) {
-        service.signin(userParameter);
+        try {
+            service.signin(userParameter);
+        } catch (Exception e) {
+            return new ResponseEntity(DefaultRes.res(BAD_REQUEST, e.getMessage()), HttpStatus.BAD_REQUEST);
+        }
         return new ResponseEntity(DefaultRes.res(OK, "로그인 완료"), HttpStatus.OK);
     }
 
     @PostMapping("/api/user/signup")
     public ResponseEntity signup(@RequestBody UserRequest userRequest) {
-        return new ResponseEntity(DefaultRes.res(CREATED, "회원가입 완료", service.signup(userRequest)), HttpStatus.CREATED);
+        UserResponse response = null;
+        try {
+            response = service.signup(userRequest);
+        } catch (Exception e) {
+            return new ResponseEntity(DefaultRes.res(CREATED, e.getMessage(), response), HttpStatus.CREATED);
+        }
+        return new ResponseEntity(DefaultRes.res(CREATED, "회원가입 완료", response), HttpStatus.CREATED);
     }
 }

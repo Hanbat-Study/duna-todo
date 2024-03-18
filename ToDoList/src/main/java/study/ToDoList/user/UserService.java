@@ -11,14 +11,17 @@ public class UserService {
 
     public void signin(UserParameter parameter) {
         User user = repository.findByLoginIdAndPassword(parameter.getLoginId(), parameter.getPassword());
-//        if(user==null){
-//            throw new Exception(NOT_FOUND);
-//        }
-        // 로그인 유저가 존재하는지, 없으면 에러
+        if (user == null) {
+            throw new RuntimeException("로그인 실패");
+        }
     }
 
     public UserResponse signup(UserRequest userRequest) {
-        User user = repository.save(userRequest.to());
+        User requestUser = userRequest.to();
+        if (repository.findByLoginId(requestUser.getLoginId()) == null) {
+            throw new RuntimeException("동일한 아이디가 존재");
+        }
+        User user = repository.save(requestUser);
         return UserResponse.from(user);
     }
 }
