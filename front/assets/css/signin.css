@@ -1,15 +1,3 @@
-*{
-    margin: 0px;
-    background-color: honeydew;
-}
-
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-}
-
 section{
     align-items: center;
     display: flex;
