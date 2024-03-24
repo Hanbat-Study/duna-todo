@@ -14,16 +14,17 @@
   <header>
     <div>
       <h1>to-do lists</h1>
-  </div>
+    </div>
   </header>
   <main>
     <!-- 로그인 -->
     <form>
-    <section id="signup" class="container">
-      <!-- 여기에서 페이지를 만들어 주세요 -->
+      <section id="signup" class="container">
+        <!-- 여기에서 페이지를 만들어 주세요 -->
 
-        <input id="username" type="text" placeholder="이름" name="name" required>
-        
+        <p id="pname"></p>
+        <input id="username" type="text" placeholder="이름" name="name">
+
         <div>
           <label for="male">성별</label>
           <label for="male">남</label>
@@ -31,15 +32,15 @@
           <label for="female">여</label>
           <input type="radio" id="female" value="여" name="gender" required>
         </div>
-        
+
         <div>
           <label for="birth">생일</label>
           <input id="birth" type="date" name="birth" required>
         </div>
-        
+
         <div>
-          <label for="lives">고향</label>
-          <select name="lives" id="region">
+          <label for="hometown">고향</label>
+          <select name="hometown" id="hometown">
             <option value="서울">서울</option>
             <option value="경기도">경기도</option>
             <option value="강원도">강원도</option>
@@ -55,18 +56,21 @@
             <option value="제주도">제주도</option>
           </select>
         </div>
-        
-        <input type="email" id="email" placeholder="아이디(이메일)" name="email" required>
-        <input type="password" id="password1" placeholder="비밀번호" name="password1" required>
-        <input type="password" id="password2" placeholder="비밀번호 확인" name="password2" required>
-        
+
+        <p id="pid"></p>
+        <input id="id" placeholder="아이디(이메일)" name="id">
+
+        <p id="ppsw"></p>
+        <input type="password" id="password1" placeholder="비밀번호" name="password1">
+        <input type="password" id="password2" placeholder="비밀번호 확인" name="password2">
+
         <button id="singup_btn">SING UP</button>
         <button id="back_btn">BACK</button>
       </section>
     </form>
   </main>
   <footer>
-    
+
   </footer>
   <script src="./js/signup.js"></script>
 </body>
