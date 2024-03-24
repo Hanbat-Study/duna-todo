@@ -48,18 +48,6 @@ password2_input.addEventListener("change", () => password2 = password2_input.val
 
 singup_btn.onclick = function () {
 
-
-    event.preventDefault()
-    console.log("이름", username)
-    console.log("성별", gender)
-    console.log("생일", birth)
-    console.log("고향", hometown)
-    console.log("아이디(이메일)", id)
-    console.log("비밀번호", password1)
-
-
-
-
     const user = {
         "name": username,
         "gender": gender,
@@ -87,10 +75,7 @@ const reEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z
 
 const resPass = /^[A-Za-z0-9]{8,20}$/;
 
-const res = /^[A-Za-z0-9]{1,20}$/;
-
-document.getElementById("singup_btn").disabled = true;
-let cnt = 0;
+const res = /^[ㄱ-ㅎ가-힣A-Za-z0-9]{1,20}$/;
 
 let ppsw = document.getElementById("ppsw");
 let pid = document.getElementById("pid");
@@ -102,10 +87,10 @@ let fname = false;
 
 function emailValid(id) {
     if (!reEmail.exec(id)) {
-        pid.innerHTML  = "@”, “.” 포함";
+        pid.innerHTML = "@”, “.” 포함";
         fid = false;
     } else {
-        pid.innerHTML  = "만족";
+        pid.innerHTML = "만족";
         fid = true;
     }
     console.log(fid);
@@ -113,10 +98,10 @@ function emailValid(id) {
 
 function passwordValid(password) {
     if (!resPass.exec(password)) {
-        ppsw.innerHTML  = "8자 이상";
+        ppsw.innerHTML = "8자 이상";
         fpsw = false;
     } else {
-        ppsw.innerHTML  = "만족";
+        ppsw.innerHTML = "만족";
         fpsw = true;
     }
     console.log(fpsw);
@@ -127,7 +112,7 @@ function usernameValid(username) {
         pnmae.innerHTML = "입력하세요.";
         fname = false;
     } else {
-        pnmae.innerHTML  = "만족";
+        pnmae.innerHTML = "만족";
         fname = true;
     }
     console.log(fname);
@@ -142,7 +127,7 @@ function disabled_btn() {
     if (fpsw && fid && fname) {
         singup_btn.disabled = false;
     }
-    else{
+    else {
         singup_btn.disabled = true;
     }
 }
