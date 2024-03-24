@@ -18,17 +18,18 @@
 </header>
   <main>
     <!-- 로그인 -->
-    <section id="signin">
+    <section id="signin" >
       <!-- 여기에서 페이지를 만들어 주세요 -->
 
       <!-- <form> -->
-        <form>
+        <form method="post" target="todo.html">
           <div class="container">
             <h3> sign in</h3>
             
+            <p id="pid"></p>
+            <input type="text" id="id" placeholder="Type your username" name="id" required>
             
-            <input type="text" id="username" placeholder="Type your username" name="username" required>
-            
+            <p id="ppsw"></p>
             <input type="password" id="password" placeholder="Type your password" name="password" required>
             
             <button id="signin_btn">SIGN IN</button>
@@ -44,6 +45,7 @@
     
   </footer>
   <script src="./js/signin.js"></script>
+  <script src="./js/cookie.js"></script>
 </body>
 
 </html>

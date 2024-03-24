@@ -22,11 +22,9 @@ function getCookie(ckey){
 
 function checkCookie(){
     let token = getCookie("loginToken");
-    if(token !=""){
-        let html=`<p>${token}</p>`
-        document.getElementById("loginToken").innerHTML=html;
-
-    }else{
+    if(token ==""){
+        // let html=`<p>${token}</p>`
+        // document.getElementById("loginToken").innerHTML=html;
         window.location.href="signin.html";
     }
 }

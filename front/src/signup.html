@@ -10,7 +10,7 @@
   <title>My To Do List</title>
 </head>
 
-<body>
+<body onload="checkCookie()">
   <header>
     <div>
       <h1>to-do lists</h1>
@@ -18,7 +18,7 @@
   </header>
   <main>
     <!-- 로그인 -->
-    <form>
+    <form method="post" target="signin.html">
       <section id="signup" class="container">
         <!-- 여기에서 페이지를 만들어 주세요 -->
 
@@ -73,6 +73,7 @@
 
   </footer>
   <script src="./js/signup.js"></script>
+  <script src="./js/cookie.js"></script>
 </body>
 
 </html>
