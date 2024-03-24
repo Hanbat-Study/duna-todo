@@ -21,10 +21,15 @@ password_input.addEventListener("change", function () {
 singin_btn.onclick = function () {
     console.log("로그인 페이지로 이동합니다")
 
-
-    const token = "eyJpc0xvZ2luIjp0cnVlLCJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.sLC9uaPTSFGzcoWSNe91b505maoXtnHzhPI3-WbuWnc";
-    setCookie("loginToken", token);
-    window.location.href = "todo.html";
+    const user = localStorage.getItem("user");
+    
+    if(user!=null){
+        const parseUser = JSON.parse(user)
+        if(id == parseUser.loginId && password == parseUser.password){
+            const token = "eyJpc0xvZ2luIjp0cnVlLCJ0eXBlIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.sLC9uaPTSFGzcoWSNe91b505maoXtnHzhPI3-WbuWnc";
+            setCookie("loginToken", token);
+        }
+    }
 };
 
 let singup_btn = document.getElementById("signup_btn");
