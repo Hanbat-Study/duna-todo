@@ -20,12 +20,19 @@ function getCookie(ckey){
     }
 }
 
-function checkCookie(){
+function checkHasNotCookie(){
     let token = getCookie("loginToken");
     if(token ==""){
         // let html=`<p>${token}</p>`
         // document.getElementById("loginToken").innerHTML=html;
-        window.location.href="signin.html";
+        location.href="signin.html";
+    }
+}
+
+function checkHasCookie(){
+    let token = getCookie("loginToken");
+    if(token !=""){
+        location.href="todo.html";
     }
 }
 
